@@ -1,0 +1,12 @@
+#text-container {
+  margin-bottom: 20px;
+}
+
+.note {
+  cursor: pointer;
+  background-color: yellow;
+}
+
+.note:hover {
+  color: red;
+}
