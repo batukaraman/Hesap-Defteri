@@ -47,7 +47,7 @@ function highlightSelectedText(noteObj) {
   );
   spanNode.title = noteObj.text;
   spanNode.onclick = function () {
-    alert(noteObj.text);
+    alert(noteObj.note);
   };
 
   let beforeText = document.createTextNode(
