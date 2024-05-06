@@ -10,3 +10,6 @@
 .note:hover {
   color: red;
 }
+#note-form {
+  position: absolute;
+}

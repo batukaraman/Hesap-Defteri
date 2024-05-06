@@ -30,6 +30,7 @@ function addNote() {
   };
 
   notes.push(noteObj);
+  console.log(notes);
   highlightSelectedText(noteObj);
 
   noteInput.value = "";
@@ -38,6 +39,7 @@ function addNote() {
 
 function highlightSelectedText(noteObj) {
   let textElement = document.getElementById("text");
+  console.log(textElement.childNodes);
   let textNode = textElement.childNodes[0];
   let spanNode = document.createElement("span");
   spanNode.className = "note";
@@ -45,7 +47,7 @@ function highlightSelectedText(noteObj) {
     noteObj.start,
     noteObj.end
   );
-  spanNode.title = noteObj.text;
+  spanNode.title = noteObj.note;
   spanNode.onclick = function () {
     alert(noteObj.note);
   };
@@ -62,7 +64,6 @@ function highlightSelectedText(noteObj) {
   textElement.appendChild(beforeText);
   textElement.appendChild(spanNode);
   textElement.appendChild(afterText);
-  console.log(notes);
 }
 
 document.addEventListener("mouseup", getSelectedText);
