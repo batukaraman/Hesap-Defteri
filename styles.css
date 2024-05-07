@@ -13,3 +13,7 @@
 #note-form {
   position: absolute;
 }
+.highlight {
+  background-color: yellow;
+  cursor: pointer;
+}
